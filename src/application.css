@@ -1,0 +1,45 @@
+.first-layer {
+    position: relative;
+    z-index: 1;
+}
+
+.application {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.application__movable,
+.application__clone {
+    position: absolute;
+    user-select: none;
+}
+
+.application__moving {
+    opacity: 0.2;
+}
+
+.application__selected::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 1px dashed blue;
+
+    /* display: inline-block;
+
+    width: 0;
+    height: 0;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid blue;
+
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+canvas {
+    margin-top: 100vh;
+}
